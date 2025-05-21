@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
+{% block tittle %} Ekstrakcja produktów {% endblock %}
 {% block content %}
+<form action="{{url_for('extract')}}" method="post">
+    <label for="product_id">Podaj identyfikator produktu: </label>
+    <input type="text" name="product_id" id="product_id">
+    <button type="submit">Pobierz opinię</button>
+</form>
     
 {% endblock %}

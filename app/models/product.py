@@ -14,10 +14,11 @@ class Product:
         self.stats = stats
 
     def __str__(self):
+        nl="\n\n"
         return f"""product_id: {self.product_id}
             product_name: {self.product_name}
             stats: {json.dumps(self.stats, indent=4, ensure_ascii=False)}
-            reviews: {"\n\n".join([str(review) for review in self.reviews])}
+            reviews: {nl.join([str(review) for review in self.reviews])}
         """
     
     def reviews_to_dict(self):

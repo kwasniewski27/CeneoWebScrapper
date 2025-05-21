@@ -1,4 +1,5 @@
-from flask import render_template
+from flask import render_template, redirect, url_for, requepipst
+from app.models.product import Product
 
 from app import app
 
@@ -7,8 +8,17 @@ def index():
     return render_template("index.html")
 
 @app.route('/extract')
-def extract():
+def display_form():
     return render_template("extract.html")
+
+@app.route('/extract', methods=['POST'])
+def extract():
+    product_id = request.form.get('product_id')
+    product = Product(product_id)
+    product.extract_reviews().extract_name().calculate_stats()
+    product.export_reviews()
+    product.export_info()
+    return redirect(url_for('product', product_id=product_id))
 
 @app.route('/products')
 def products():
