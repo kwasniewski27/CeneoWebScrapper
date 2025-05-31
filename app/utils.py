@@ -1,4 +1,3 @@
-
 def extract(ancestor, selector = None, attribute = None, many = False):
     if selector:
         if many:
