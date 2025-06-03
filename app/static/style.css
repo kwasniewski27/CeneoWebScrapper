@@ -1,0 +1,74 @@
+/* --- Reset i ogólne ustawienia --- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Nagłówki --- */
+header h1 {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  color: #ff6400;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* --- Nawigacja z ikonami Bootstrap --- */
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+nav i.bi-caret-right-fill {
+  margin-right: 8px;
+  color: #0d6efd; /* Bootstrap primary */
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+/* --- Sekcja główna --- */
+section.container {
+  margin-top: 30px;
+}
+.container2 {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* --- Stopka --- */
+footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #240202;
+}
+
